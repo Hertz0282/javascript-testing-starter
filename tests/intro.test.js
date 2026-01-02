@@ -2,6 +2,7 @@ import { describe, test, it, expect } from "vitest";
 import { max } from "../src/intro.js";
 import { fizzBuzz } from "../src/intro.js";
 import { calAverage } from "../src/intro.js";
+import { calFactorial } from "../src/intro.js";
 
 // describe take two arguments first is a string second is a callback function. The string is the name of the test suite which is usually the name of the function we are testing. The callback function contains one or more tests.
 describe('max', () => { 
@@ -73,4 +74,23 @@ describe('calAverage', () => {
     })
 
 
+})
+
+// Testing factorial
+describe('calFactorial', () => {
+    test('should return 1 for 0!', () => {
+        expect(calFactorial(0)).toBe(1);
+    })
+
+    test('should return undefined for negative numbers', () => {
+        expect(calFactorial(-1)).toBe(undefined)
+    })
+
+    test('should return 120 for 5!', () => {
+        expect(calFactorial(5)).toBe(120);
+    })
+
+    test('should return 3628800 for 10!', () => {
+        expect(calFactorial(1)).toBe(1);
+    })
 })

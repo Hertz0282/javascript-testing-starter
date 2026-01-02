@@ -19,3 +19,15 @@ export function calAverage(numbers) {
 
   return sum / numbers.length;
 }
+
+// Bonus Exercise: Calculate Factorial
+export function calFactorial(number) {
+  if (number < 0){
+    return undefined;
+  }
+  else if (number === 0) {
+    return 1;
+  }
+
+  return number * calFactorial(number - 1);
+}
