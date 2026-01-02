@@ -1,5 +1,6 @@
 import { describe, test, it, expect } from "vitest";
 import { max } from "../src/intro.js";
+import { fizzBuzz } from "../src/intro.js";
 
 // describe take two arguments first is a string second is a callback function. The string is the name of the test suite which is usually the name of the function we are testing. The callback function contains one or more tests.
 describe('max', () => { 
@@ -30,3 +31,23 @@ describe('max', () => {
         expect(max(5, 5)).toBe(5);
     })
  })
+
+
+ describe('fizzBuzz', () => {
+    // can use test or it for defining a test case
+    test('should return "FizzBuzz" for multiples of 3 and 5', () => {
+        expect(fizzBuzz(15)).toBe('FizzBuzz');
+    });
+
+    test('should return "Fizz" for multiples of 3', () => {
+        expect(fizzBuzz(9)).toBe('Fizz');
+    })
+
+    test('should return "Buzz" for multiples of 5', () => {
+        expect(fizzBuzz(10)).toBe('Buzz');
+    })
+
+    test('should return the number as a string for non-multiples of 3 or 5', () => {
+        expect(fizzBuzz(7)).toBe('7');
+    })
+ });
