@@ -53,7 +53,7 @@ describe('max', () => {
     })
  });
 
-//  how to write codes in a test driven development (TDD) approach. TDD produces a 100% test coverage codebase.
+//  how to write codes in a test driven development (TDD) approach. TDD produces a 100% test coverage codebase. TDD prevents us from over-engineering a solution. TDD helps us write only the code that is necessary to pass the tests. TDD helps us write better code that is easier to maintain and refactor.
 // calculate average
 describe('calAverage', () => {
     it('should return NaN if given an empty array', () => {
