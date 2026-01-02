@@ -83,7 +83,8 @@ describe('calFactorial', () => {
     })
 
     test('should return undefined for negative numbers', () => {
-        expect(calFactorial(-1)).toBe(undefined)
+        // expect(calFactorial(-1)).toBe(undefined)
+        expect(calFactorial(-5)).toBeUndefined();
     })
 
     test('should return 120 for 5!', () => {
