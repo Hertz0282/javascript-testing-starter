@@ -1,6 +1,7 @@
 import { describe, test, it, expect } from "vitest";
 import { max } from "../src/intro.js";
 import { fizzBuzz } from "../src/intro.js";
+import { calAverage } from "../src/intro.js";
 
 // describe take two arguments first is a string second is a callback function. The string is the name of the test suite which is usually the name of the function we are testing. The callback function contains one or more tests.
 describe('max', () => { 
@@ -51,3 +52,25 @@ describe('max', () => {
         expect(fizzBuzz(7)).toBe('7');
     })
  });
+
+//  how to write codes in a test driven development (TDD) approach. TDD produces a 100% test coverage codebase.
+// calculate average
+describe('calAverage', () => {
+    it('should return NaN if given an empty array', () => {
+        expect(calAverage([])).toBe(NaN);
+    })
+
+    it('should calculate the average of an array with one element', () => {
+        expect(calAverage([5])).toBe(5);
+    })
+    
+    it('should calculate the average of an array with two element', () => {
+        expect(calAverage([5, 7])).toBe(6);
+    })
+    
+    it('should calculate the average of an array with three element', () => {
+        expect(calAverage([5, 7, 9])).toBe(7);
+    })
+
+
+})
